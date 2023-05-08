@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    z-index: 10;
+    
 }
 
 html{
@@ -12,7 +12,7 @@ html{
 
 
 body {
-    background:;
+    background:radial-gradient(white,#FFFAF4,#FFF2CC);
     height: 100%;
     width: 100%;
 }
@@ -25,6 +25,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    z-index: 3;
 }
 .logo{
     margin-left: 60px;
@@ -71,8 +72,12 @@ nav {
     position: absolute;
     width: 100%;
     top: 100%;
-    z-index: 40;
+    z-index: 5;
     display: none ;
+    background: linear-gradient(40deg,#38383857,#00000049);
+}
+.bottom-part-on{
+    display: block ;
 }
 
 .dropdown ul li {
@@ -101,6 +106,16 @@ nav {
 
 .dropdown i {
     color: white ;
+}
+.dropdown i-rotate {
+    color: white ;
+}
+h5{
+    padding: 6px 15px;
+    transition: all 0.2s ease-in;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
 }
 a h3 {
     padding: 6px 15px;
@@ -189,6 +204,7 @@ main {
 .placeA , .placeB{
     width: 50%;
     height: 90vh;
+    z-index: 2;
 }
 
 .A-picture-mod{
@@ -234,6 +250,7 @@ main {
     font-size: 50px;
     font-family: 'Tilt Warp', cursive;
     position: relative;
+    z-index: 3;
 }
 .logo1{
     margin-left: 60px;
@@ -266,19 +283,20 @@ main {
     width: 150vw;
     background: #FFA559;
     bottom: 0;
-    z-index: 2;
+    z-index: 0;
     transform: rotate(100deg);
     right: -55vw;
 }
 
 .para-text-B{
     font-size: 20px;
-    color: rgb(255, 255, 255);
-    border: 1px solid black;
+    color: #FFFAF4;
+    text-align: start;
+    line-height: 26px;
 }
 
 .B-text{
-    border: 10px red solid;
+    margin-top:50px ;
     height: 1200px;
     width: 800px;
     justify-content: space-between;
@@ -288,26 +306,20 @@ main {
 }
 
 .B-bottom{
-    border: 6px solid orange;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50%;
 }
-.B-text-under{
-    border: 1px soild rgb(255, 238, 0);
-}
+
 .B-top{
-    border: 2px solid black;
     height: 50%;
     width: 100%
     ;display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.B-header{
-    border: 3px solid purple;
-}
+
 
 .sign-up1 {
     padding: 11px 30px;
@@ -359,18 +371,45 @@ main {
 
 
 
-main {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#fake-main {
     height: 800px;
     width: 100%;
     color: white    ;
     justify-content: space-around;
     display :flex;
     align-items: center;
-    
-
+    position: absolute;
+    left: 3000px;
+    background: linear-gradient(40deg,#38383857,#00000049);
+    z-index: 5;
 }
 
-main label {
+#fake-main label {
     color:white ;
     font-family: 'Poppins', sans-serif
 }
@@ -397,9 +436,9 @@ main label {
     background-color: rgba(255, 255, 255, 0);
     backdrop-filter: blur(10px);
     overflow-x: hidden;
-    border-radius: 10px 27px ;
+    border-radius: 10px  ;
     position: relative;
-    opacity: 0;
+    
 }
 
 .wrapper {
@@ -409,14 +448,13 @@ main label {
     background-color: rgba(255, 255, 255, 0);
     backdrop-filter: blur(10px);
    /* overflow-x: hidden;*/
-    border-radius: 10px 27px ;
+    border-radius: 10px ;
     position: relative;
-    opacity: 0;
+    
 }
 
 .form-box {
     margin-top: 30px;
-    
 }
 .x-forthe-box {
     position: absolute;;
@@ -428,9 +466,10 @@ main label {
     width: 40px;
     height: 40px;
     padding: 7px 12.5px ;
-    border-radius: 0px 20px;
+    border-radius: 0px 5px;
     transition: all 0.7s ease;
     cursor: pointer;
+    transform: rotate();
 }
 .x-forthe-box:hover {
     
@@ -445,23 +484,24 @@ h3 {
     font-size: 60px;
     text-align: center;
 }
-main .input  {
+#fake-main .input  {
     display: flex;
     justify-content: center;
     margin: 40px 0px ;
 }
 
-main .input input {
+#fake-main .input input {
     font-family: 'Poppins', sans-serif;
     width: 80%;
     height: 40px;
     background-color: rgba(255, 255, 255, 1);
     margin: 0px 0px 0px 30px;
     border: none;
+    padding:10px 5px
     
 }
 
-main .input label { 
+#fake-main .input label { 
     margin: 4px 20px 0px 20px ; ;
 }
 
@@ -510,9 +550,6 @@ main .input label {
 .actual-login:hover  {
     background-color: rgba(255, 255, 255 );
     color: black;
-    
-
-
 }
 .register1 p {
     font-family: 'Poppins', sans-serif;
@@ -547,9 +584,7 @@ main .input label {
     font-size: 15px;
 }
 .register a:hover {
-    
     text-decoration: underline;
-   
 }
 
 
@@ -589,12 +624,9 @@ footer {
     width: 100%;
     display: flex;
     justify-content: center;;
-    background-color: #FFA559
+    background-color: #FFA559;
+    z-index: 3;
 }
-
-
-
-
 
 
 .butts {
@@ -602,7 +634,7 @@ footer {
     flex-direction: column ;
     justify-content: space-around;
     width: 20%;
-    
+    z-index: 3;
 }
 
 .newsletter-btn {
@@ -648,21 +680,24 @@ footer {
 }
 
 .learn-more ul li a {
-    margin:20px 40px ;
+    margin:5px 40px ;
     text-decoration: none;
-    color: rgb(54, 34, 7);
+    color: #000;
     transition: all .3s ease-in-out;
+    padding: 15px 0;
 }
 
 .Support {
     width: 20%;
-    
+    z-index: 3;
 }
 .Company {
     width: 20%;
+    z-index: 3;
 }
 .learn-more {
     width: 20%;
+    z-index: 3;
 }
 
 .Support ul li {
@@ -672,10 +707,11 @@ footer {
 }
 
 .Support ul li a {
-    margin:20px 40px ;
+    margin:5px 40px ;
     text-decoration: none;
-    color: rgb(0, 132, 255);
+    color: #000;
     transition: all .3s ease-in-out;
+    padding: 15px 0;
 }
 .Company ul li {
     list-style: none ;
@@ -685,15 +721,16 @@ footer {
 }
 
 .Company ul li a {
-    margin:20px 40px ;
+    margin:5px 40px ;
     text-decoration: none;
-    color: rgb(0, 255, 34);
+    color: #000;
     transition: all .3s ease-in-out;
+    padding: 15px 0;
 }
 
 h2 {
     font-size: 27px;
-    color: blue;
+    color: #262A56;
     margin-left: 38px;
     letter-spacing: 1px;
 }
@@ -701,6 +738,7 @@ h2 {
 .socials {
     display: flex;
     justify-content: space-evenly;
+    margin-top: 60px
 }
 
 .socials a  {
@@ -720,7 +758,7 @@ h2 {
 }
 
 .Company ul li a:hover , .Support ul li a:hover ,.learn-more ul li a:hover  {
-    transform: translateX(7px);
+    transform: translateX(10px);
     color: white;
 }
 
