@@ -1,0 +1,525 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+html{
+    font-family: 'Quicksand', sans-serif;
+    
+}
+
+
+body {
+    background:;
+    height: 100%;
+    width: 100%;
+}
+
+nav {
+    height: 150px;
+    width: 100%;
+    background: #FFA559;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    margin-left: 60px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.logo-text{
+    font-size: 40px;
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-weight: 800;
+}
+.smaller-logo-text{
+    font: 32px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    color: white;
+    margin-left: 5px;
+}
+.right-side{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 50%;
+}
+.dropdown{
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    
+    
+}
+.top-part{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+h3{
+    color: white ;
+    font-size: 25px;
+    text-align: center;
+}
+.bottom-part{
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    z-index: 40;
+    display: none ;
+}
+
+.dropdown ul li {
+    list-style:none;
+    padding: 10px 0;
+    text-align: center;
+}
+.dropdown ul li:hover {
+    background: #ffffff49;
+    border: 0.5px solid rgba(0, 0, 0, 0.397);
+    border-radius: 5px;
+}
+.dropdown ul a {
+    text-decoration: none;
+    color: rgb(0, 0, 0) ;
+    font-family: 'Sono', sans-serif;
+    text-transform: uppercase;
+}
+
+
+
+
+.dropdown i {
+    color: white ;
+}
+a h3 {
+    padding: 6px 15px;
+    position: relative;
+    transition: all 0.2s ease-in;
+    text-decoration: none;
+    
+}
+
+a h3:hover {
+    transform: scale(1.1);
+    text-decoration: underline grey 
+}
+
+a  {
+    text-decoration: none;
+}
+
+.sign-up {
+    padding: 11px 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #262A56;
+    color: #fff;
+    border: none;
+    border-radius: 9px;
+    height: 60px;
+    width: 150px;
+    font-size: 22px;
+    font-weight: 600;
+    cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+
+}
+.sign-in {
+    padding: 19px 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #263A29;
+    color: #fff;
+    border: none;
+    border-radius: 9px;
+    height: 60px;
+    width: 150px;
+    font-size: 22px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+.sign-in:hover {
+     background: #355239;
+     transform: scale(1.1);
+     color: aliceblue;
+}
+.sign-up:hover {
+    background: #31366e;
+    transform: scale(1.1);
+    color: aliceblue;
+}
+main {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    border: 1px solid pink;
+    
+}
+
+.placeA , .placeB{
+    width: 50%;
+    height: 90vh;
+}
+
+.A-picture-mod{
+    display: relative;
+}
+
+.A_pic1 , .A_pic2 , .A_pic3 {
+    position: absolute;
+    top: 600px;
+}
+
+.A_pic1 {
+    width: 700px;
+    height: 300px;
+    top: 150px;
+    z-index: 7;
+    left: 100px;
+
+}
+
+.A_pic2 {
+    width: 1000px;
+    height: 600px;
+    z-index:8;
+    top: 330px;
+    left: 100px;
+}
+
+.A_pic3 {
+    width: 1500px;
+    height: 1500px;
+    z-index: 9;
+    top: -100px;
+    right: 950px;
+}
+
+.placeB {
+    display: flex;
+    flex-direction: column;
+}
+
+.B-header {
+    font-size: 50px;
+    font-family: 'Tilt Warp', cursive;
+    position: relative;
+}
+.logo1{
+    margin-left: 60px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    left: -50px;
+    
+}
+.logo-text1{
+    font-size: 55px;
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-weight: 800;
+    align-self: center;
+}
+.smaller-logo-text1{
+    font: 47px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    color: white;
+    margin-left: 5px;
+    align-self: end;
+}
+
+.second-background {
+    position: absolute;
+    height: 120vh;
+    width: 150vw;
+    background: #FFA559;
+    bottom: 0;
+    z-index: 2;
+    transform: rotate(100deg);
+    right: -55vw;
+}
+
+.para-text-B{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    border: 1px solid black;
+}
+
+.B-text{
+    border: 10px red solid;
+    height: 1200px;
+    width: 800px;
+    justify-content: space-between;
+    align-items: end;
+    position: relative;
+    left:80px;
+}
+
+.B-bottom{
+    border: 6px solid orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+.B-text-under{
+    border: 1px soild rgb(255, 238, 0);
+}
+.B-top{
+    border: 2px solid black;
+    height: 50%;
+    width: 100%
+    ;display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.B-header{
+    border: 3px solid purple;
+}
+
+.sign-up1 {
+    padding: 11px 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #262A56;
+    color: #fff;
+    border: none;
+    border-radius: 9px;
+    height: 85px;
+    width: 180px;
+    font-size: 28px;
+    font-weight: 600;
+    cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+    margin: 0 20px;
+
+}
+.sign-in1 {
+    padding: 19px 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #263A29;
+    color: #fff;
+    border: none;
+    border-radius: 9px;
+    height: 85px;
+    width: 180px;
+    font-size: 28px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    margin: 0 20px;
+}
+.sign-in1:hover {
+     background: #355239;
+     transform: scale(1.1);
+     color: aliceblue;
+}
+.sign-up1:hover {
+    background: #31366e;
+    transform: scale(1.1);
+    color: aliceblue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;;
+    background-color: #FFA559
+}
+
+
+
+
+
+
+.butts {
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-around;
+    width: 20%;
+    
+}
+
+.newsletter-btn {
+    padding: 20px 40px;
+    background-color: transparent;
+    color: white;
+    border: 3px solid white;
+    border-radius: 0.5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition:all .3s ease;
+    font-weight: 600;
+}
+.newsletter-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.discord-btn {
+    padding: 20px 50px;
+    background-color: transparent;
+    color: white;
+    border: 3px solid white;
+    border-radius: 0.5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition:all .3s ease;
+    font-weight: 600;
+}
+
+.discord-btn:hover {
+    background-color: white;
+    color: black;
+    
+}
+
+.learn-more ul li {
+    list-style: none ;
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    
+}
+
+.learn-more ul li a {
+    margin:20px 40px ;
+    text-decoration: none;
+    color: rgb(54, 34, 7);
+    transition: all .3s ease-in-out;
+}
+
+.Support {
+    width: 20%;
+    
+}
+.Company {
+    width: 20%;
+}
+.learn-more {
+    width: 20%;
+}
+
+.Support ul li {
+    list-style: none ;
+    display: flex;
+    flex-direction: column ;
+}
+
+.Support ul li a {
+    margin:20px 40px ;
+    text-decoration: none;
+    color: rgb(0, 132, 255);
+    transition: all .3s ease-in-out;
+}
+.Company ul li {
+    list-style: none ;
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-evenly;
+}
+
+.Company ul li a {
+    margin:20px 40px ;
+    text-decoration: none;
+    color: rgb(0, 255, 34);
+    transition: all .3s ease-in-out;
+}
+
+h2 {
+    font-size: 27px;
+    color: blue;
+    margin-left: 38px;
+    letter-spacing: 1px;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.socials a  {
+    color: rgb(255, 0, 0);
+    transition: all .3s ease-in-out;
+    border: 2px solid white;
+    border-radius: 15% 5%;
+    width: 55px;
+    height: 50px;
+    padding-left: 9px;
+    padding-top: 4px;
+}
+
+.socials a:hover{
+    color: rgb(0, 0, 0);
+    background-color: white;;
+}
+
+.Company ul li a:hover , .Support ul li a:hover ,.learn-more ul li a:hover  {
+    transform: translateX(7px);
+    color: white;
+}
+
+
+
+
+
+
+
+
+
