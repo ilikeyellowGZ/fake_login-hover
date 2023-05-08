@@ -24,6 +24,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 .logo{
     margin-left: 60px;
@@ -57,8 +58,6 @@ nav {
     display: flex;
     flex-direction: column;
     width: 260px;
-    
-    
 }
 .top-part{
     display: flex;
@@ -67,11 +66,7 @@ nav {
     position: relative;
     width: 100%;
 }
-h3{
-    color: white ;
-    font-size: 25px;
-    text-align: center;
-}
+
 .bottom-part{
     position: absolute;
     width: 100%;
@@ -98,6 +93,10 @@ h3{
 }
 
 
+.mem {
+    width: 130px;
+    position: relative;
+}
 
 
 .dropdown i {
@@ -105,15 +104,29 @@ h3{
 }
 a h3 {
     padding: 6px 15px;
-    position: relative;
     transition: all 0.2s ease-in;
     text-decoration: none;
-    
+    font-size: 25px;
+    color: white;
 }
 
-a h3:hover {
-    transform: scale(1.1);
-    text-decoration: underline grey 
+nav a h3:after {
+    content: "";
+    background-color: white;
+    position: absolute;;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition:all 0.8s ease-in-out;
+    transform: scaleX(0);
+}
+nav a h3:hover:after{
+    width: 100%;
+    transform: scaleX(1);
+}
+nav a h3:hover{
+    color: white;;
 }
 
 a  {
@@ -343,6 +356,202 @@ main {
     transform: scale(1.1);
     color: aliceblue;
 }
+
+
+
+main {
+    height: 800px;
+    width: 100%;
+    color: white    ;
+    justify-content: space-around;
+    display :flex;
+    align-items: center;
+    
+
+}
+
+main label {
+    color:white ;
+    font-family: 'Poppins', sans-serif
+}
+.wrapper.active {
+    opacity: 100;
+    transform: translateX(450px);
+    transition: opacity 0.5s ease-in;
+    
+}
+.wrapper2.active {
+    opacity: 100;
+    transform: translateX(-505px);
+    transition: opacity 0.5s ease-in;
+}
+
+.x-forthe-box.active {
+
+}
+
+.wrapper2{
+   width: 500px;
+    height: 76%;
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    overflow-x: hidden;
+    border-radius: 10px 27px ;
+    position: relative;
+    opacity: 0;
+}
+
+.wrapper {
+    width: 500px;
+    height: 70%;
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+   /* overflow-x: hidden;*/
+    border-radius: 10px 27px ;
+    position: relative;
+    opacity: 0;
+}
+
+.form-box {
+    margin-top: 30px;
+    
+}
+.x-forthe-box {
+    position: absolute;;
+    top: 0;
+    right: 0;
+    background-color: white;
+    color: rgb(20, 20, 158);
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    padding: 7px 12.5px ;
+    border-radius: 0px 20px;
+    transition: all 0.7s ease;
+    cursor: pointer;
+}
+.x-forthe-box:hover {
+    
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-size: 21px;
+    
+}
+
+
+h3 {
+    font-size: 60px;
+    text-align: center;
+}
+main .input  {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0px ;
+}
+
+main .input input {
+    font-family: 'Poppins', sans-serif;
+    width: 80%;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 1);
+    margin: 0px 0px 0px 30px;
+    border: none;
+    
+}
+
+main .input label { 
+    margin: 4px 20px 0px 20px ; ;
+}
+
+.remeber-forget {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: -3%;
+}
+.remeber-forget input {
+    transform: scale(1.5);
+    accent-color: darksalmon;
+}
+
+.remeber-forget span  {
+    font-family: 'Poppins', sans-serif;
+    
+}
+.remeber-forget a  {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: white;;
+    transition: underline 1s ease;
+}
+
+.remeber-forget a:hover  {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: underline;
+    color: white;;
+}
+
+.actual-login {
+    width: 44%;
+    padding: 15px 40px;
+    background-color: transparent;
+    color: white;
+    border: 3px solid white;
+    border-radius: 5px ;
+    cursor: pointer;
+    font-size: 20px;
+    transition:all .7s ease;
+    font-weight: 600;
+    margin: 50px 29% 10px 28%;
+}
+
+.actual-login:hover  {
+    background-color: rgba(255, 255, 255 );
+    color: black;
+    
+
+
+}
+.register1 p {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;;
+    font-size: 15px;
+}
+
+.register1 a {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: white;
+    transition: underline 1s ease;
+    font-size: 15px;
+}
+.register1 a:hover {
+    
+    text-decoration: underline;
+   
+}
+
+.register p {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;;
+    font-size: 15px;
+}
+
+.register a {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: white;
+    transition: underline 1s ease;
+    font-size: 15px;
+}
+.register a:hover {
+    
+    text-decoration: underline;
+   
+}
+
 
 
 
