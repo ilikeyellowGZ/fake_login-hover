@@ -13,8 +13,9 @@ html{
 
 body {
     background:radial-gradient(white,#FFFAF4,#FFF2CC);
-    height: 100%;
+    height: 1500px;
     width: 100%;
+    overflow-x: hidden;
 }
 
 nav {
@@ -26,6 +27,8 @@ nav {
     align-items: center;
     position: relative;
     z-index: 3;
+    position: sticky;
+    top:0;
 }
 .logo{
     margin-left: 60px;
@@ -67,6 +70,15 @@ nav {
     position: relative;
     width: 100%;
 }
+.top-part-clicked{
+    border: 1px solid #fff;
+}
+.dropdown:hover  .bottom-part {
+    display: block;
+}
+.dropdown:hover  .top-part {
+    border: 1PX solid #fff;
+}
 
 .bottom-part{
     position: absolute;
@@ -79,16 +91,51 @@ nav {
 .bottom-part-on{
     display: block ;
 }
+.caret {
+    width: 0;
+    height: 0;
+    border-top:5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left:6px solid rgb(255, 255, 255);
+    transition: 0.4s;
+    right: 80px;
+    position: absolute;
+    top: 15px;
+}
+.caret1 {
+    width: 0;
+    height: 0;
+    border-top:5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right:6px solid rgb(255, 254, 254);
+    transition: 0.4s;
+    position: absolute;
+    left: 80px;
+    top: 15px;
+}
+
+
 
 .dropdown ul li {
     list-style:none;
     padding: 10px 0;
-    text-align: center;
+    text-align: end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
 }
 .dropdown ul li:hover {
     background: #ffffff49;
     border: 0.5px solid rgba(0, 0, 0, 0.397);
     border-radius: 5px;
+}
+.dropdown ul li:hover .caret1 {
+    transform: rotate(-90deg);
+}
+.dropdown ul li:hover .caret {
+    transform: rotate(90deg);
 }
 .dropdown ul a {
     text-decoration: none;
@@ -101,6 +148,7 @@ nav {
 .mem {
     width: 130px;
     position: relative;
+    right: 30px;
 }
 
 
@@ -127,13 +175,13 @@ a h3 {
 
 nav a h3:after {
     content: "";
-    background-color: white;
+    background:linear-gradient(90deg,red,blue) ;
     position: absolute;;
     height: 3px;
     width: 0%;
-    left: 0;
+    left: 5px;
     bottom: -10px;
-    transition:all 0.8s ease-in-out;
+    transition:all 0.5s ease-in-out;
     transform: scaleX(0);
 }
 nav a h3:hover:after{
@@ -282,7 +330,7 @@ main {
     height: 120vh;
     width: 150vw;
     background: #FFA559;
-    bottom: 0;
+    bottom: 500px;
     z-index: 0;
     transform: rotate(100deg);
     right: -55vw;
@@ -296,13 +344,13 @@ main {
 }
 
 .B-text{
-    margin-top:50px ;
+    margin-top:90px ;
     height: 1200px;
     width: 800px;
     justify-content: space-between;
     align-items: end;
     position: relative;
-    left:80px;
+    left:57px;
 }
 
 .B-bottom{
@@ -396,61 +444,57 @@ main {
 
 
 
-#fake-main {
-    height: 800px;
+.fake-main.active {
+    height: 1000px;
     width: 100%;
-    color: white    ;
     justify-content: space-around;
     display :flex;
     align-items: center;
+    position: fixed;
+    background: linear-gradient(40deg,#38383857,rgba(0, 0, 0, 0.849));
     position: absolute;
-    left: 3000px;
-    background: linear-gradient(40deg,#38383857,#00000049);
     z-index: 5;
 }
+.fake-main {
+    display: block;
+}
+.fake-main * {
+    z-index: 5;
+    
+}
 
-#fake-main label {
+.fake-main label {
     color:white ;
     font-family: 'Poppins', sans-serif
 }
-.wrapper.active {
-    opacity: 100;
-    transform: translateX(450px);
-    transition: opacity 0.5s ease-in;
-    
-}
-.wrapper2.active {
-    opacity: 100;
-    transform: translateX(-505px);
-    transition: opacity 0.5s ease-in;
-}
 
-.x-forthe-box.active {
-
-}
-
-.wrapper2{
-   width: 500px;
-    height: 76%;
+.wrapper2.active{
+    width: 500px;
+    height: 650px;
     border: 2px solid white;
     background-color: rgba(255, 255, 255, 0);
     backdrop-filter: blur(10px);
     overflow-x: hidden;
     border-radius: 10px  ;
     position: relative;
-    
+    display: block;
+}
+.wrapper2{
+    display: none;
+}
+.wrapper{
+    display: none;
 }
 
-.wrapper {
+.wrapper.active {
     width: 500px;
-    height: 70%;
+    height: 600px;
     border: 2px solid white;
     background-color: rgba(255, 255, 255, 0);
     backdrop-filter: blur(10px);
-   /* overflow-x: hidden;*/
     border-radius: 10px ;
     position: relative;
-    
+    display: block;
 }
 
 .form-box {
@@ -484,13 +528,13 @@ h3 {
     font-size: 60px;
     text-align: center;
 }
-#fake-main .input  {
+.fake-main .input  {
     display: flex;
     justify-content: center;
     margin: 40px 0px ;
 }
 
-#fake-main .input input {
+.fake-main .input input {
     font-family: 'Poppins', sans-serif;
     width: 80%;
     height: 40px;
@@ -501,7 +545,7 @@ h3 {
     
 }
 
-#fake-main .input label { 
+.fake-main .input label { 
     margin: 4px 20px 0px 20px ; ;
 }
 
@@ -626,6 +670,7 @@ footer {
     justify-content: center;;
     background-color: #FFA559;
     z-index: 3;
+    padding-top: 24px;
 }
 
 
