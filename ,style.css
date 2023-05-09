@@ -496,6 +496,55 @@ main {
     position: relative;
     display: block;
 }
+.wrapper.active.red {
+    width: 500px;
+    height: 600px;
+    border: 2px solid rgb(255, 0, 0);
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    border-radius: 10px ;
+    position: relative;
+    display: block;
+    animation: bums 0.2s   1  ;
+    
+}.x-forthe-box.red{
+    position: absolute;;
+    top: 0;
+    right: 0;
+    background-color: white;
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    padding: 7px 12.5px ;
+    border-radius: 0px 5px;
+    cursor: pointer;
+    transform: rotate();
+}
+
+@keyframes bums{
+    1% {
+        transform: translateX(20px);
+
+    }
+    11% {
+        transform: translateX(0px);
+
+    }25% {
+        transform: translateX(-20px);
+
+    }50% {
+        transform: translateX(0px);
+
+    }75% {
+        transform: translateX(20px);
+
+    }100% {
+        transform: translateX(0px);
+
+    }
+
+}
 
 .form-box {
     margin-top: 30px;

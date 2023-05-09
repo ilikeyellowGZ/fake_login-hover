@@ -27,8 +27,8 @@ const form = document.querySelector("form")
 form.addEventListener("submit",(e)=>{
     e.preventDefault()
 
-    //you have to write the suername and password right and at the bottom
-    const username = "TheReal911"
+    //you have to write the surname and password right and at the bottom
+    const username = "TheReel911"
     const password = "password"
 
     const authenticated = authentication(username,password)
@@ -36,7 +36,8 @@ form.addEventListener("submit",(e)=>{
     if(authenticated){
         alert("You have authenticated")
     }else{
-        
+        login.classList.add('red'); 
+        theX.classList.add('red');
     }
 })
 
@@ -49,7 +50,7 @@ function authentication(username,password){
         return false
     }
 }
-
+const fromBtn = document.querySelector ("actual-login")
 const loginBtn = document.querySelector (".sign-in")
 const logupBtn = document.querySelector (".sign-up")
 const registerLink = document.querySelector('.register');
@@ -94,4 +95,6 @@ registerLink1.addEventListener('click', () => {
     login.classList.add('active');
     loginTwo.classList.remove('active');
 });
+
+
 
