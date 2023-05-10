@@ -13,7 +13,7 @@ dropdowns.forEach(dropdown => {
         menu.classList.toggle('bottom-part-on');
     }); 
     document.addEventListener("click", function(event) {
-        // If user clicks inside the element, do nothing
+        // If user clicks inside the element, do nothingg
         if (event.target.closest(".dropdown")) return
         // If user clicks outside the element, hide it!
         select.classList.remove('top-part-clicked');
@@ -28,18 +28,18 @@ form.addEventListener("submit",(e)=>{
     e.preventDefault()
 
     //you have to write the surname and password right and at the bottom
-    const username = "TheReel911"
-    const password = "password"
+    const username = form.username.value
+    const password = form.password.value
 
     const authenticated = authentication(username,password)
 
     if(authenticated){
-        alert("You have authenticated")
+        window.location.href = "logout.html"
     }else{
-        login.classList.add('red'); 
+        login.classList.add('red');
         theX.classList.add('red');
     }
-})
+});
 
 // function for checking username and password
 
@@ -50,6 +50,8 @@ function authentication(username,password){
         return false
     }
 }
+
+
 const fromBtn = document.querySelector ("actual-login")
 const loginBtn = document.querySelector (".sign-in")
 const logupBtn = document.querySelector (".sign-up")
@@ -83,7 +85,6 @@ theX.addEventListener('click', () => {
     loginTwo.classList.remove('active');
     fakeMain.classList.remove('active');
     login.classList.remove('active');
-    
 });
 
 registerLink.addEventListener('click', () => {
